@@ -69,13 +69,13 @@ int main(void){
   } //end of if
 
   vector< vector<Fish> > ocean(gridColumns, vector<Fish>(gridRows));
-
+srand((unsigned)time(NULL  ));      
   Fish fishStore [gridRows][gridColumns];
   for(int i=0; i<numFish; i++){
     bool foundLocation=false;
     while (foundLocation==false){
 
-      srand((unsigned)time(0)); 
+      
       int columnLocation = rand() % gridColumns;
  
       int rowLocation = rand() % gridRows;
@@ -134,9 +134,11 @@ int main(void){
 
       cout << "\n";
     }//end rows forloop
-  
-  Fish fishy;
-    cout << fishy.breedAge;
+
+  system("clear");
+  while(numFish!=0 || numShark!= 0){
+
+  }
 
   
   
