@@ -14,19 +14,27 @@
 #include <mutex>
 #include <vector>
 #include <string>
+#include <ctime>
+#include <cstdlib>
 using namespace std;
 
 class Fish{
 public:
-  string kind = "fish";
+  string type="fish";
   bool exists=false;
   int breedAge=0;
+ 
 };
 
 class Shark: public Fish{
 public:
-  string kind="shark";
+ 
   int starveAge=0;
+  Shark(){
+     string type;
+     Fish::type="shark";
+  }
+ 
 };
 
 
@@ -66,8 +74,10 @@ int main(void){
   for(int i=0; i<numFish; i++){
     bool foundLocation=false;
     while (foundLocation==false){
+      
       int columnLocation = rand() % gridColumns;
-      int rowLocation = rand() % gridRows;
+ 
+      int rowLocation = rand()      % gridRows;
       if((fishStore[rowLocation][columnLocation]).exists==false)
 	{
 	  fishStore[rowLocation][columnLocation].exists=true;
@@ -84,7 +94,7 @@ int main(void){
     bool foundLocation=false;
     while (foundLocation==false){
       int columnLocation = rand() % gridColumns;
-      int rowLocation = rand() % gridRows;
+      int rowLocation = rand()  % gridRows;
       if((ocean[rowLocation][columnLocation]).exists==false)
 	{
 	  sharkStore[rowLocation][columnLocation].exists=true;
@@ -96,13 +106,15 @@ int main(void){
     
   }//end shark forloop
 
+
+  
   for (int i=0; i<gridRows; i++)
     {
       for(int j=0; j<gridColumns; j++)
 	{
 	  if(ocean[i][j].exists==true)
 	    {
-	      if(ocean[i][j].kind=="fish")
+	      if(ocean[i][j].type=="fish")
 		{
 		  cout << "F";
 		} // end fish if
@@ -121,6 +133,7 @@ int main(void){
 
       cout << "\n";
     }//end rows forloop
+  
   Fish fishy;
     cout << fishy.breedAge;
 
