@@ -74,10 +74,11 @@ int main(void){
   for(int i=0; i<numFish; i++){
     bool foundLocation=false;
     while (foundLocation==false){
-      
+
+      srand((unsigned)time(0)); 
       int columnLocation = rand() % gridColumns;
  
-      int rowLocation = rand()      % gridRows;
+      int rowLocation = rand() % gridRows;
       if((fishStore[rowLocation][columnLocation]).exists==false)
 	{
 	  fishStore[rowLocation][columnLocation].exists=true;
