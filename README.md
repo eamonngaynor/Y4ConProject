@@ -1,2 +1,18 @@
-# Y4ConProject
-Concurrency joint project
+
+
+Students:
+
+Eamonn Gaynor
+Conleth Coughlan 
+
+
+Module:
+
+Concurrency 
+
+
+Program: 
+
+Wator simulation project
+
+
