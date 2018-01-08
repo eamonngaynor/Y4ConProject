@@ -1,5 +1,0 @@
-cc=g++
-cflags= -std=c++11  *.cpp -o wator
-cfiles= wator.cpp 
-all: $(cfiles)
-	$(cc) $(cflags) 
