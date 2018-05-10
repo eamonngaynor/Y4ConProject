@@ -1,14 +1,24 @@
-# Conleth Coughlan 
-# C00197482
-#
-# Eamonn Gaynor
-#C00197458
-#
-# Wator simulator
-# CDDProject
 
-cc=g++
-cflags= -std=c++11  *.cpp -o wator
-cfiles= wator.cpp 
-all: $(cfiles)
-	$(cc) $(cflags) 
+#Author: Eamonn Gaynor                                                          
+#Date created: 08/10/2017                                                       
+#Bugs: N/A                                                                      
+#Purpose: Makefile to run wator.cpp                            
+#File: Makefile                                                                 
+#License: GPL - General Public License  
+
+                                                                               
+EXE = wator
+CC = g++
+CFLAGS = -std=c++11 -pthread -I.
+CFILES = wator.cpp
+
+
+ALL: $(CFILES)
+	$(CC) $(CFILES) $(CFLAGS) -o $(EXE) $(DEBUGFLAGS)
+
+DEBUG: DEBUGFLAGS = -g -O0 -Wall
+DEBUG: ALL
+
+
+CLEAN:
+	rm *.o

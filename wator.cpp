@@ -6,11 +6,11 @@
  |	     Conleth Coughlan (C00197482)		   |
  |							   |
  | Purpose: Wator Simulation 				   |
- |                                                         |
- |							   |
+ | Bugs: N/A                                               |
+ | File: wator.cpp					   |
  | Date: 08/01/2017					   |
  |							   |
- |							   |
+ | Licence: GPU (General Public Licence)		   |
  ----------------------------------------------------------|
 */
 
